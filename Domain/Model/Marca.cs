@@ -8,6 +8,8 @@ namespace Domain.Model
 {
     public class Marca
     {
+        public virtual int MarcaId { get; set; }
+
         public virtual string Nome { get; set; }
 
         public virtual string Descricao { get; set; }

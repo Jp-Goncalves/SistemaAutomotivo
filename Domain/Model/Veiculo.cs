@@ -12,9 +12,9 @@ namespace Domain.Model
 
         public virtual string Placa { get; set; }
 
-        public virtual Marca Marca { get; set; }
+        public virtual Modelo Modelo { get; set; }
 
-        public virtual int Km { get; set; }
+        //public virtual int Km { get; set; }
 
         public virtual string Motor { get; set; }
 

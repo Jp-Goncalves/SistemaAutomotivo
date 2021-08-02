@@ -12,7 +12,7 @@ namespace Infra.Data.Helper
 {
     public class NHibernateHelper
     {
-        public static ISession OpenSession()
+        public ISession OpenSession()
         {
             var connectioString = @"";
 

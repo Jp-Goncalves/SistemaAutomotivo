@@ -1,4 +1,5 @@
 ﻿using Domain.Enum;
+using System;
 using System.Collections.Generic;
 
 namespace Domain.Model
@@ -16,5 +17,13 @@ namespace Domain.Model
         public virtual string Detalhes { get; set; }
 
         public virtual StatusEnum StatusEnum { get; set; }
+
+        public virtual DateTime DataEntrada { get; set; }
+
+        public virtual DateTime DataSaida { get; set; }
+
+        public virtual int  Km { get; set; }
+
+        public virtual Cliente Cliente { get; set; }
     }
 }
