@@ -25,7 +25,5 @@ namespace Domain.Interface.Repository
         Task<IList<T>> SelectAllAsync();
 
         Task<T> SelectByIdAsync(int id);
-
-        //Task<T> SelectByPlacaAsync(string placa);
     }
 }
