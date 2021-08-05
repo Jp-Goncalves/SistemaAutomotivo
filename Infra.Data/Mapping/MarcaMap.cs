@@ -14,7 +14,7 @@ namespace Infra.Data.Mapping
         {
             Table("Marca");
 
-            Id(x => x.MarcaId).GeneratedBy.Assigned().UnsavedValue(0);
+            Id(x => x.MarcaId).GeneratedBy.Identity().UnsavedValue(0);
 
             Map(x => x.Nome).Length(50).Not.Nullable();
             Map(x => x.Descricao).Length(150);

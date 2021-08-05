@@ -14,13 +14,13 @@ namespace Infra.Data.Helper
     {
         public ISession OpenSession()
         {
-            var connectioString = @"";
+            var connectioString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SistemaAutomotivo;Integrated Security=True; User Id=userdb;Password=1234;";
 
             ISessionFactory sessionFactory = Fluently.Configure()
                         .Database(MsSqlConfiguration.MsSql2012
                         .ConnectionString(connectioString))
                         .Mappings(m => m.FluentMappings.AddFromAssemblyOf<NHibernateHelper>())
-                        .ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(false, false))
+                        .ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(true, true))
                         .ExposeConfiguration(c => c.SetProperty(NHibernate.Cfg.Environment.GenerateStatistics, "true"))
                         .ExposeConfiguration(c => c.SetProperty(NHibernate.Cfg.Environment.CurrentSessionContextClass, "web"))
                         .BuildSessionFactory();

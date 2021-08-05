@@ -14,7 +14,7 @@ namespace Infra.Data.Mapping
         {
             Table("Veiculo");
 
-            Id(x => x.VeiculoId).GeneratedBy.Assigned().UnsavedValue(0);
+            Id(x => x.VeiculoId).GeneratedBy.Identity().UnsavedValue(0);
 
             Map(x => x.Placa).Not.Nullable().Length(10);
             Map(x => x.Motor).Length(50);

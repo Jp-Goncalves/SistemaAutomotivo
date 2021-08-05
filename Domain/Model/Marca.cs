@@ -14,6 +14,6 @@ namespace Domain.Model
 
         public virtual string Descricao { get; set; }
 
-        public IList<Modelo> Modelos { get; set; }
+        public virtual IList<Modelo> Modelos { get; set; }
     }
 }

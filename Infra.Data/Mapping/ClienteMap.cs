@@ -14,7 +14,7 @@ namespace Infra.Data.Mapping
         {
             Table("Cliente");
 
-            Id(x => x.ClienteId).GeneratedBy.Assigned().UnsavedValue(0);
+            Id(x => x.ClienteId).GeneratedBy.Identity().UnsavedValue(0);
 
             Map(x => x.Nome).Length(50).Not.Nullable();
             Map(x => x.Endereco).Length(250);
